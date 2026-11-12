@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devina Dhea Pabundu - Telkom Landmark Tower Work Experience</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Color Customization & Font Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        peony: {
+                            red: '#B01050',
+                            dark: '#4A0818',
+                            rose: '#780830',
+                            vivid: '#D84080',
+                            blush: '#FCD4E6',
+                            pale: '#F8A8CC',
+                            light: '#FFF0F6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-peony-dark font-sans antialiased selection:bg-peony-vivid selection:text-white">
+
+    <!-- ================= NAVBAR / HEADER (Sticky Top, Background Pure White #FFFFFF) ================= -->
+    <header class="sticky top-0 z-50 bg-white border-b border-peony-pale/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+
+            <!-- Sisi Kiri: Teks Name (Bold) -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="text-lg sm:text-xl font-bold text-peony-dark tracking-tight hover:text-peony-red transition-colors">
+                    Devina Dhea Pabundu
+                </a>
+            </div>
+
+            <!-- Tengah (Tampilan Desktop): Navigasi Link -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                <a href="index.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-gradient-to-r hover:from-[#FCD4E6] hover:to-[#FFF0F6] rounded-full transition-all">
+                    Overview
+                </a>
+                <!-- Active State for Work Experience -->
+                <a href="experience.html" class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] rounded-full shadow-sm">
+                    Work Experience
+                </a>
+                <a href="projects.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-gradient-to-r hover:from-[#FCD4E6] hover:to-[#FFF0F6] rounded-full transition-all">
+                    Projects &amp; Impact
+                </a>
+            </nav>
+
+            <!-- Sisi Kanan (Tampilan Desktop): Social Icons & CTA Button -->
+            <div class="hidden md:flex items-center space-x-3 sm:space-x-4">
+                <div class="flex items-center space-x-2 pr-2 border-r border-peony-pale/50">
+                    <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300 shadow-xs">
+                        <i class="fa-brands fa-linkedin-in text-base"></i>
+                    </a>
+                    <a href="mailto:devinadheaa@gmail.com" aria-label="Email" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300 shadow-xs">
+                        <i class="fa-regular fa-envelope text-base"></i>
+                    </a>
+                    <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300 shadow-xs">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                    </a>
+                </div>
+
+                <a href="#contact-cta" class="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] text-white shadow-md hover:shadow-lg hover:opacity-95 rounded-full transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+
+            <!-- Tombol Mobile Hamburger Menu -->
+            <div class="flex md:hidden items-center">
+                <button id="mobile-menu-button" type="button" aria-label="Toggle Navigation Menu" class="w-10 h-10 inline-flex items-center justify-center rounded-lg text-peony-dark hover:text-peony-red hover:bg-peony-light focus:outline-none transition-colors">
+                    <i id="hamburger-icon" class="fa-solid fa-bars text-xl"></i>
+                    <i id="close-icon" class="fa-solid fa-xmark text-2xl hidden"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-peony-pale/40 bg-white px-4 pt-3 pb-5 space-y-3 shadow-lg">
+            <div class="flex flex-col space-y-1.5">
+                <a href="index.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-peony-light/50 rounded-xl transition-colors">
+                    Overview
+                </a>
+                <a href="experience.html" class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] rounded-xl">
+                    Work Experience
+                </a>
+                <a href="projects.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-peony-light/50 rounded-xl transition-colors">
+                    Projects &amp; Impact
+                </a>
+            </div>
+
+            <div class="border-t border-peony-pale/30 pt-3">
+                <div class="flex items-center justify-center space-x-4 mb-3">
+                    <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                        <i class="fa-brands fa-linkedin-in text-base"></i>
+                    </a>
+                    <a href="mailto:devinadheaa@gmail.com" aria-label="Email" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                        <i class="fa-regular fa-envelope text-base"></i>
+                    </a>
+                    <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                    </a>
+                </div>
+
+                <a href="#contact-cta" class="w-full inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] text-white shadow-md rounded-xl transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= BACK BUTTON & WORK EXPERIENCE HEADER ================= -->
+    <section class="bg-peony-light py-6 sm:py-8 lg:py-10 border-b border-peony-pale/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Top Back Button Link -->
+            <div class="mb-4">
+                <a href="experience.html" class="inline-flex items-center px-4 py-2 text-xs font-bold bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white rounded-full transition-all duration-300 shadow-sm">
+                    <i class="fa-solid fa-arrow-left mr-2 text-[11px]"></i> Back to Work Experience
+                </a>
+            </div>
+
+            <div class="max-w-4xl">
+                <!-- Main Title -->
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-peony-dark tracking-tight leading-tight mb-2">
+                    Telkom Landmark Tower by Telkom Indonesia
+                </h1>
+
+                <!-- Position Title -->
+                <p class="text-lg sm:text-xl font-bold text-peony-red mb-3">
+                    Marketing Communications Specialist
+                </p>
+
+                <!-- Scope & Status Badge Tag -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-blush text-peony-rose border border-peony-pale">
+                        Internship
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-peony-dark border border-peony-pale">
+                        <i class="fa-regular fa-calendar-check mr-1.5 text-peony-red"></i> June - August 2023
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-peony-dark border border-peony-pale">
+                        <i class="fa-solid fa-location-dot mr-1.5 text-peony-red"></i> Jakarta, Indonesia
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= 4 KEY PERFORMANCE METRICS GRID ================= -->
+    <section class="bg-white py-6 sm:py-8 lg:py-10 border-b border-peony-pale/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+                
+                <!-- METRIC CARD 1 -->
+                <div class="bg-peony-light/60 rounded-2xl p-4 sm:p-5 border border-peony-pale/70 shadow-xs flex flex-col justify-between">
+                    <div class="w-9 h-9 rounded-xl bg-peony-blush text-peony-red flex items-center justify-center text-base mb-3 border border-peony-pale/50">
+                        <i class="fa-solid fa-photo-film"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-peony-red mb-0.5">15+</h2>
+                        <p class="text-xs font-bold text-peony-dark uppercase tracking-wider mb-1">Content Assets</p>
+                        <p class="text-[11px] text-peony-rose/90 font-medium leading-snug">
+                            Instagram Stories &amp; Feed Posts Created for B2B Lifestyle Positioning
+                        </p>
+                    </div>
+                </div>
+
+                <!-- METRIC CARD 2 -->
+                <div class="bg-peony-light/60 rounded-2xl p-4 sm:p-5 border border-peony-pale/70 shadow-xs flex flex-col justify-between">
+                    <div class="w-9 h-9 rounded-xl bg-peony-blush text-peony-red flex items-center justify-center text-base mb-3 border border-peony-pale/50">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-peony-red mb-0.5">B2B</h2>
+                        <p class="text-xs font-bold text-peony-dark uppercase tracking-wider mb-1">Lifestyle Framing</p>
+                        <p class="text-[11px] text-peony-rose/90 font-medium leading-snug">
+                            Emotional &amp; Lifestyle Framing for Premium Office Complex Leasing
+                        </p>
+                    </div>
+                </div>
+
+                <!-- METRIC CARD 3 -->
+                <div class="bg-peony-light/60 rounded-2xl p-4 sm:p-5 border border-peony-pale/70 shadow-xs flex flex-col justify-between">
+                    <div class="w-9 h-9 rounded-xl bg-peony-blush text-peony-red flex items-center justify-center text-base mb-3 border border-peony-pale/50">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-peony-red mb-0.5">Cross-Dept</h2>
+                        <p class="text-xs font-bold text-peony-dark uppercase tracking-wider mb-1">Workflow Alignment</p>
+                        <p class="text-[11px] text-peony-rose/90 font-medium leading-snug">
+                            Marcomm &amp; Finance Workflow Alignment (Fund Requests &amp; Invoices)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- METRIC CARD 4 -->
+                <div class="bg-peony-light/60 rounded-2xl p-4 sm:p-5 border border-peony-pale/70 shadow-xs flex flex-col justify-between">
+                    <div class="w-9 h-9 rounded-xl bg-peony-blush text-peony-red flex items-center justify-center text-base mb-3 border border-peony-pale/50">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-peony-red mb-0.5">Tenant</h2>
+                        <p class="text-xs font-bold text-peony-dark uppercase tracking-wider mb-1">Relations Maintained</p>
+                        <p class="text-[11px] text-peony-rose/90 font-medium leading-snug">
+                            Tenant Relationships Maintained &amp; Venue Usage Optimized for Events
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 1: ROLE OVERVIEW & CORE RESPONSIBILITIES (2 COLUMNS) ================= -->
+    <section class="bg-white py-6 sm:py-8 lg:py-10 border-b border-peony-pale/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
+                
+                <!-- Left Column -->
+                <div class="bg-peony-light/40 rounded-2xl p-5 sm:p-6 border border-peony-pale/60 flex flex-col justify-between">
+                    <div>
+                        <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-blush text-peony-rose mb-3">
+                            B2B LIFESTYLE STORYTELLING
+                        </span>
+                        <h2 class="text-lg sm:text-xl font-extrabold text-peony-dark mb-3">
+                            Reframing Office Leasing through Emotional Perception
+                        </h2>
+                        <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed font-normal">
+                            Office leasing is a high involvement B2B decision shaped by human perception. I reframed Telkom Landmark Tower from a functional office space into an aspirational workplace through emotional and lifestyle-led communication narratives, building tenant loyalty and positive brand equity.
+                        </p>
+                    </div>
+
+                    <div class="mt-4 pt-4 border-t border-peony-pale/40">
+                        <div class="flex items-center space-x-2 text-xs font-semibold text-peony-rose">
+                            <i class="fa-solid fa-building-user text-peony-red text-sm"></i>
+                            <span>Strategic Impact: Elevated tenant engagement and venue consideration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-peony-pale shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-red text-white mb-3">
+                            CORE RESPONSIBILITIES
+                        </span>
+                        <h2 class="text-lg sm:text-xl font-extrabold text-peony-dark mb-3">
+                            Marcomm Strategy &amp; Financial Coordination
+                        </h2>
+                        <ul class="space-y-2 text-xs sm:text-sm text-peony-dark/90 leading-relaxed">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-xs"></i>
+                                <span><strong>Social Media Strategy:</strong> Crafted content plans for @telkomlandmarktower to boost B2B visibility.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-xs"></i>
+                                <span><strong>Creative Asset Creation:</strong> Created 15+ creative briefs, stories, and feed posts highlighting building amenities.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-xs"></i>
+                                <span><strong>Financial &amp; Operations Workflow:</strong> Coordinated marketing finance documentation including fund requests and invoices.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-4 pt-4 border-t border-peony-pale/40">
+                        <div class="flex items-center space-x-2 text-xs font-semibold text-peony-red">
+                            <i class="fa-solid fa-circle-check text-sm"></i>
+                            <span>Execution Result: Streamlined cross-departmental marcomm &amp; finance workflows</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 2: STRATEGIC CAMPAIGN PILLARS (3 CARDS) ================= -->
+    <section class="bg-peony-light/50 py-6 sm:py-8 lg:py-10 border-b border-peony-pale/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+                <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-blush text-peony-rose border border-peony-pale mb-2">
+                    CAMPAIGN PILLARS
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-peony-dark tracking-tight">
+                    Strategic Campaign Pillars &amp; Initiatives
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-peony-pale shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-xl bg-peony-light text-peony-red flex items-center justify-center text-lg mb-4 border border-peony-pale/50">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold text-peony-dark mb-2">
+                        Lifestyle Storytelling for B2B Engagement
+                    </h3>
+                    <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed font-normal">
+                        Created engaging content pillars like Office Street Style, Work Hard, Play Harder, and Coworker Bonding Tips to build tenant loyalty and brand affinity beyond standard leasing pitches.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-peony-pale shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-xl bg-peony-light text-peony-red flex items-center justify-center text-lg mb-4 border border-peony-pale/50">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold text-peony-dark mb-2">
+                        Tenant &amp; Event Venue Activation
+                    </h3>
+                    <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed font-normal">
+                        Engaged with corporate tenants to understand venue expectations, documented major internal events like Pekan Raya TLT and Funtastic Day Telkom 58th, and promoted venue usage for external events and weddings.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-peony-pale shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-xl bg-peony-light text-peony-red flex items-center justify-center text-lg mb-4 border border-peony-pale/50">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold text-peony-dark mb-2">
+                        Strategic Positioning &amp; Pricing Framework
+                    </h3>
+                    <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed font-normal">
+                        Positioned premium building attributes (Vertical Garden, modern facilities) as emotional benefits while collaborating on strategic pricing frameworks to maximize venue profitability and consideration among prospects.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SECTION 3: CORE COMPETENCIES & KEY ACCOMPLISHMENTS ================= -->
+    <section class="bg-white py-6 sm:py-8 lg:py-10 border-b border-peony-pale/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto bg-peony-light/50 rounded-2xl p-6 sm:p-8 border border-peony-pale">
+                <h2 class="text-lg sm:text-xl font-extrabold text-peony-dark mb-4 text-center">
+                    Core Competencies &amp; Key Accomplishments at Telkom Landmark Tower
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-peony-dark/90">
+                    <div class="flex items-center space-x-2.5 bg-white p-3 rounded-xl border border-peony-pale/60">
+                        <i class="fa-solid fa-circle-check text-peony-red"></i>
+                        <span>B2B Brand Management &amp; Leasing Narratives</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5 bg-white p-3 rounded-xl border border-peony-pale/60">
+                        <i class="fa-solid fa-circle-check text-peony-red"></i>
+                        <span>Content Creation &amp; Social Copywriting</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5 bg-white p-3 rounded-xl border border-peony-pale/60">
+                        <i class="fa-solid fa-circle-check text-peony-red"></i>
+                        <span>Tenant Relationship Management</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5 bg-white p-3 rounded-xl border border-peony-pale/60">
+                        <i class="fa-solid fa-circle-check text-peony-red"></i>
+                        <span>Inter-Departmental Collaboration (Finance &amp; Operations)</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5 bg-white p-3 rounded-xl border border-peony-pale/60">
+                        <i class="fa-solid fa-circle-check text-peony-red"></i>
+                        <span>UI/UX Website Architecture Coordination</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5 bg-white p-3 rounded-xl border border-peony-pale/60">
+                        <i class="fa-solid fa-circle-check text-peony-red"></i>
+                        <span>CSR Communications &amp; Event Amplification</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 4: DELIVERABLES & VISUAL GALLERY (LOCAL .AVIF ASSETS) ================= -->
+    <section class="bg-peony-light/40 py-6 sm:py-8 lg:py-10 border-b border-peony-pale/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+                <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-blush text-peony-rose border border-peony-pale mb-2">
+                    VISUAL ARCHIVE
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-peony-dark tracking-tight">
+                    Work Deliverables &amp; Content Gallery
+                </h2>
+            </div>
+
+            <!-- Touch-Swipe Mobile Horizontal Slider with Automatic Desktop Grid -->
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible">
+                
+                <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                    <img src="assets/work/telkom/1.avif" alt="Telkom Deliverable 1" class="w-full h-full object-cover">
+                </div>
+
+                <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                    <img src="assets/work/telkom/2.avif" alt="Telkom Deliverable 2" class="w-full h-full object-cover">
+                </div>
+
+                <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                    <img src="assets/work/telkom/3.avif" alt="Telkom Deliverable 3" class="w-full h-full object-cover">
+                </div>
+
+                <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                    <img src="assets/work/telkom/4.avif" alt="Telkom Deliverable 4" class="w-full h-full object-cover">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SECTION 5: RECOMMENDATION & PAGE NAVIGATION FOOTER ================= -->
+    <section class="bg-white py-6 sm:py-8 lg:py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Testimonial Quote Box -->
+            <div class="bg-peony-light rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-peony-pale max-w-4xl mx-auto mb-8 sm:mb-10 text-center relative">
+                <i class="fa-solid fa-quote-left text-3xl text-peony-blush mb-3 block"></i>
+                <p class="text-xs sm:text-sm text-peony-dark font-normal leading-relaxed mb-4 italic">
+                    "What I appreciated most about Devina was her positive attitude and the way she took ownership of her responsibilities."
+                </p>
+                <div>
+                    <p class="text-xs font-bold text-peony-red">Maria Natasya Duka</p>
+                    <p class="text-[11px] text-peony-rose/80 font-semibold">Mentor &middot; Commercial Strategy &amp; Strategic Partnerships, Telkom Landmark Tower</p>
+                </div>
+            </div>
+
+            <!-- Page Navigation Bottom Bar -->
+            <div class="flex flex-row items-center justify-between border-t border-peony-pale/40 pt-6 max-w-4xl mx-auto text-xs font-bold gap-3">
+                <a href="fifgroup.html" class="inline-flex items-center px-4 py-2 text-xs font-bold bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white rounded-full transition-all duration-300 shadow-sm">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>
+                    <span>Previous: FIFGROUP</span>
+                </a>
+
+                <a href="pertamina.html" class="inline-flex items-center px-4 py-2 text-xs font-bold bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white rounded-full transition-all duration-300 shadow-sm">
+                    <span>Next: Pertamina Foundation</span>
+                    <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SECTION: GLOBAL CTA & FOOTER ================= -->
+    <footer id="contact-cta" class="bg-peony-dark text-white rounded-t-[2rem] sm:rounded-t-[3rem] pt-10 sm:pt-14 pb-6 border-t border-peony-rose/30 shadow-2xl relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- MAIN CTA BANNER CARD -->
+            <div class="bg-peony-rose/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-peony-pale/20 shadow-xl mb-8 sm:mb-10 backdrop-blur-sm relative overflow-hidden">
+                <div class="relative z-10 text-center max-w-3xl mx-auto space-y-4">
+                    <!-- Pill Tag Kecil (Top) -->
+                    <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-vivid/30 text-peony-blush border border-peony-pale/30">
+                        LET'S CONNECT
+                    </span>
+
+                    <!-- Main Title -->
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                        Ready to Elevate Your Brand &amp; Corporate Strategy?
+                    </h2>
+
+                    <!-- Sub-text -->
+                    <p class="text-sm sm:text-base text-peony-blush/90 font-normal leading-relaxed">
+                        Whether you have an upcoming project, media relations inquiry, or career opportunity, I am always open to discussing strategic communication solutions that drive real impact.
+                    </p>
+
+                    <!-- 2 Action Buttons Row -->
+                    <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                        <!-- Direct Chat Button (White to Pink Gradient) -->
+                        <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#FFFFFF] to-[#FFF0F6] text-[#780830] border border-[#F8A8CC] hover:from-[#FCD4E6] hover:to-[#FFFFFF] rounded-full shadow-md transition-all duration-300">
+                            <i class="fa-brands fa-whatsapp text-lg mr-2 text-[#B01050]"></i> Start a Conversation
+                        </a>
+                        <!-- Download CV Button -->
+                        <a href="assets/CV_Devina_Dhea_Pabundu.pdf" download class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#FFFFFF] to-[#FFF0F6] text-[#4A0818] hover:from-[#FCD4E6] hover:to-[#FFFFFF] rounded-full shadow-md transition-all duration-300">
+                            <i class="fa-solid fa-file-arrow-down text-base mr-2 text-[#B01050]"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIRECT CONTACT & SOCIAL MEDIA GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 mb-10">
+                
+                <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" class="bg-peony-rose/30 hover:bg-peony-rose/60 border border-peony-pale/20 hover:border-peony-pale/50 rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] group-hover:from-[#B01050] group-hover:to-[#780830] group-hover:text-white flex items-center justify-center text-lg mb-3 border border-peony-pale/30 transition-all duration-300">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">WhatsApp Direct</p>
+                        <p class="text-sm font-bold text-white group-hover:text-peony-blush transition-colors">+62 812-3541-4147</p>
+                    </div>
+                </a>
+
+                <a href="mailto:devinadheaa@gmail.com" class="bg-peony-rose/30 hover:bg-peony-rose/60 border border-peony-pale/20 hover:border-peony-pale/50 rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] group-hover:from-[#B01050] group-hover:to-[#780830] group-hover:text-white flex items-center justify-center text-lg mb-3 border border-peony-pale/30 transition-all duration-300">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">Email Address</p>
+                        <p class="text-sm font-bold text-white group-hover:text-peony-blush transition-colors truncate">devinadheaa@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="bg-peony-rose/30 hover:bg-peony-rose/60 border border-peony-pale/20 hover:border-peony-pale/50 rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] group-hover:from-[#B01050] group-hover:to-[#780830] group-hover:text-white flex items-center justify-center text-lg mb-3 border border-peony-pale/30 transition-all duration-300">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">LinkedIn Profile</p>
+                        <p class="text-sm font-bold text-white group-hover:text-peony-blush transition-colors truncate">linkedin.com/in/devinadheap</p>
+                    </div>
+                </a>
+
+                <div class="bg-peony-rose/30 border border-peony-pale/20 rounded-2xl p-4 sm:p-5 flex flex-col justify-between">
+                    <div class="w-10 h-10 rounded-xl bg-peony-red/30 text-peony-blush flex items-center justify-center text-lg mb-3 border border-peony-pale/30">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">Current Base</p>
+                        <p class="text-sm font-bold text-white">Surabaya &amp; Jakarta, Indonesia</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SUB-FOOTER / COPYRIGHT ROW -->
+            <div class="flex flex-col sm:flex-row items-center justify-between border-t border-white/10 pt-6 gap-3">
+                <p class="text-xs text-peony-blush/70 font-medium text-center sm:text-left">
+                    &copy; 2026 Devina Dhea Pabundu. All Rights Reserved.
+                </p>
+
+                <a href="#" class="inline-flex items-center space-x-2 text-xs font-semibold bg-gradient-to-r from-[#FFFFFF] to-[#FFF0F6] text-[#4A0818] hover:from-[#FCD4E6] hover:to-[#FFFFFF] px-4 py-1.5 rounded-full shadow-sm transition-all duration-300">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up text-[10px] text-[#B01050]"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

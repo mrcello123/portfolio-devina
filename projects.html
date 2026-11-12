@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devina Dhea Pabundu - Projects &amp; Impact</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Color Customization & Font Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        peony: {
+                            red: '#B01050',
+                            dark: '#4A0818',
+                            rose: '#780830',
+                            vivid: '#D84080',
+                            blush: '#FCD4E6',
+                            pale: '#F8A8CC',
+                            light: '#FFF0F6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-peony-dark font-sans antialiased selection:bg-peony-vivid selection:text-white">
+
+    <!-- ================= NAVBAR / HEADER (Sticky Top, Background Pure White #FFFFFF) ================= -->
+    <header class="sticky top-0 z-50 bg-white border-b border-peony-pale/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+
+            <!-- Sisi Kiri: Teks Name (Bold) -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="text-lg sm:text-xl font-bold text-peony-dark tracking-tight hover:text-peony-red transition-colors">
+                    Devina Dhea Pabundu
+                </a>
+            </div>
+
+            <!-- Tengah (Tampilan Desktop): Navigasi Link -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                <a href="index.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-gradient-to-r hover:from-[#FCD4E6] hover:to-[#FFF0F6] rounded-full transition-all">
+                    Overview
+                </a>
+                <a href="experience.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-gradient-to-r hover:from-[#FCD4E6] hover:to-[#FFF0F6] rounded-full transition-all">
+                    Work Experience
+                </a>
+                <!-- Active State for Projects & Impact -->
+                <a href="projects.html" class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] rounded-full shadow-sm">
+                    Projects &amp; Impact
+                </a>
+            </nav>
+
+            <!-- Sisi Kanan (Tampilan Desktop): Social Icons & CTA Button -->
+            <div class="hidden md:flex items-center space-x-3 sm:space-x-4">
+                <div class="flex items-center space-x-2 pr-2 border-r border-peony-pale/50">
+                    <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300 shadow-xs">
+                        <i class="fa-brands fa-linkedin-in text-base"></i>
+                    </a>
+                    <a href="mailto:devinadheaa@gmail.com" aria-label="Email" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300 shadow-xs">
+                        <i class="fa-regular fa-envelope text-base"></i>
+                    </a>
+                    <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300 shadow-xs">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                    </a>
+                </div>
+
+                <a href="#contact-cta" class="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] text-white shadow-md hover:shadow-lg hover:opacity-95 rounded-full transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+
+            <!-- Tombol Mobile Hamburger Menu -->
+            <div class="flex md:hidden items-center">
+                <button id="mobile-menu-button" type="button" aria-label="Toggle Navigation Menu" class="w-10 h-10 inline-flex items-center justify-center rounded-lg text-peony-dark hover:text-peony-red hover:bg-peony-light focus:outline-none transition-colors">
+                    <i id="hamburger-icon" class="fa-solid fa-bars text-xl"></i>
+                    <i id="close-icon" class="fa-solid fa-xmark text-2xl hidden"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-peony-pale/40 bg-white px-4 pt-3 pb-5 space-y-3 shadow-lg">
+            <div class="flex flex-col space-y-1.5">
+                <a href="index.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-peony-light/50 rounded-xl transition-colors">
+                    Overview
+                </a>
+                <a href="experience.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-peony-light/50 rounded-xl transition-colors">
+                    Work Experience
+                </a>
+                <a href="projects.html" class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] rounded-xl">
+                    Projects &amp; Impact
+                </a>
+            </div>
+
+            <div class="border-t border-peony-pale/30 pt-3">
+                <div class="flex items-center justify-center space-x-4 mb-3">
+                    <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                        <i class="fa-brands fa-linkedin-in text-base"></i>
+                    </a>
+                    <a href="mailto:devinadheaa@gmail.com" aria-label="Email" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                        <i class="fa-regular fa-envelope text-base"></i>
+                    </a>
+                    <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                    </a>
+                </div>
+
+                <a href="#contact-cta" class="w-full inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] text-white shadow-md rounded-xl transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= PAGE HEADER (COMPACT INTRO) ================= -->
+    <section class="bg-peony-light py-8 sm:py-10 border-b border-peony-pale/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-blush text-peony-rose border border-peony-pale mb-3">
+                    PORTFOLIO HIGHLIGHTS
+                </span>
+                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-peony-dark tracking-tight mb-2">
+                    Projects &amp; Impact
+                </h1>
+                <p class="text-sm sm:text-base text-peony-rose/90 font-normal leading-relaxed">
+                    A curated collection of integrated marketing communication campaigns, academic research publications, social impact initiatives, and international event executions that drive measurable business and strategic impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS LIST CONTAINER ================= -->
+    <section class="bg-white pt-8 sm:pt-10 pb-12 sm:pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
+
+            <!-- PROJECT CARD 1: RESEARCH & WRITING (2025 & 2023) - PURE CONTENT (NO IMAGES) -->
+            <article class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-peony-pale shadow-sm hover:shadow-md transition-all duration-200">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-4 pb-4 border-b border-peony-pale/40">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-vivid text-white shadow-xs">
+                            ACADEMIC RESEARCH &amp; PUBLICATIONS
+                        </span>
+                        <span class="text-xs font-semibold text-peony-rose/80 bg-peony-light px-3 py-1 rounded-full border border-peony-pale/50">
+                            Lead &amp; Sole Author | 2023 to 2025
+                        </span>
+                    </div>
+                    <span class="text-xs font-medium text-peony-dark/70 flex items-center">
+                        <i class="fa-solid fa-graduation-cap mr-1.5 text-peony-red"></i> Indexed Journals
+                    </span>
+                </div>
+
+                <div class="mb-5">
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-peony-dark mb-1 leading-snug">
+                        Research &amp; Writing: Proven in Print
+                    </h2>
+                    <p class="text-xs sm:text-sm font-semibold text-peony-rose/90">
+                        Published academic journal articles demonstrating rigorous quantitative and qualitative research, NVivo data coding, and long-form English academic writing.
+                    </p>
+                </div>
+
+                <!-- Quick Metrics Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">2</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Journal Articles Published (2023 &amp; 2025)</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">222</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Survey Respondents &amp; In-depth Interviews</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">8</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Citations on ResearchGate</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">DOAJ</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Indexed in International Open Access Directory</p>
+                    </div>
+                </div>
+
+                <!-- Content 2-Column Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-6">
+                    <div class="bg-peony-light/40 rounded-xl p-4 sm:p-5 border border-peony-pale/60 space-y-3">
+                        <h3 class="text-sm font-bold text-peony-dark uppercase tracking-wider flex items-center">
+                            <i class="fa-solid fa-book-bookmark mr-2 text-peony-red"></i> 2025 Research Publication
+                        </h3>
+                        <div>
+                            <p class="text-xs font-bold text-peony-rose mb-0.5">Sole Author | Golden Age Journal (Vol 10, No 4)</p>
+                            <p class="text-xs text-peony-dark/90 leading-relaxed">
+                                "The Role of Family Communication and Peer Groups in Adolescent Sexual Attitudes: A Phenomenological Study on the Friends with Benefits Phenomenon in Jakarta" (DOI: 10.14421/jga.2025.104-05).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-4 sm:p-5 border border-peony-pale space-y-3">
+                        <h3 class="text-sm font-bold text-peony-dark uppercase tracking-wider flex items-center">
+                            <i class="fa-solid fa-book-bookmark mr-2 text-peony-red"></i> 2023 Research Publication
+                        </h3>
+                        <div>
+                            <p class="text-xs font-bold text-peony-rose mb-0.5">Lead Author | MediaTor Journal (Vol 16, No 2)</p>
+                            <p class="text-xs text-peony-dark/90 leading-relaxed">
+                                "Role of Family Communication and Boarding School System in Forming Child Independence" (DOI: 10.29313/mediator.v16i2.2710 | 8 Citations).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deliverables & Direct Action Buttons -->
+                <div class="mb-5">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <a href="https://ejournal.uin-suka.ac.id/tarbiyah/goldenage/article/view/11686" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i> Read 2025 Golden Age Article
+                        </a>
+                        <a href="https://journals.unisba.ac.id/index.php/mediator/article/view/2710" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i> Read 2023 MediaTor Article
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pt-3.5 border-t border-peony-pale/30 flex flex-wrap items-center gap-1.5">
+                    <span class="text-[11px] font-bold text-peony-dark mr-1">Skills:</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Quantitative &amp; Qualitative Research</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Academic Writing</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">NVivo Data Coding</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Survey Methodology</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Evidence-Based Strategy</span>
+                </div>
+            </article>
+
+            <!-- PROJECT CARD 2: URBAN VILLAGE 2022/2023 (ARTA LAKSANA) - WITH EARNED MEDIA SECTION -->
+            <article class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-peony-pale shadow-sm hover:shadow-md transition-all duration-200">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-4 pb-4 border-b border-peony-pale/40">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-vivid text-white shadow-xs">
+                            BRAND ACTIVATION &amp; INTEGRATED CAMPAIGN
+                        </span>
+                        <span class="text-xs font-semibold text-peony-rose/80 bg-peony-light px-3 py-1 rounded-full border border-peony-pale/50">
+                            Project Manager | Oct 2022 to Jan 2023
+                        </span>
+                    </div>
+                    <span class="text-xs font-medium text-peony-dark/70 flex items-center">
+                        <i class="fa-solid fa-location-dot mr-1.5 text-peony-red"></i> Desa Laksana, Ibun, Bandung
+                    </span>
+                </div>
+
+                <div class="mb-5">
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-peony-dark mb-1 leading-snug">
+                        Arta Laksana: Urban Village 2022
+                    </h2>
+                    <p class="text-xs sm:text-sm font-semibold text-peony-rose/90">
+                        Integrated West Java village branding and water conservation campaign.
+                    </p>
+                </div>
+
+                <!-- Quick Metrics Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-extrabold text-peony-red mb-0.5">1,259</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Audience Reached</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-extrabold text-peony-red mb-0.5">7</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">High Schools Visited</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-extrabold text-peony-red mb-0.5">93%</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Relevance Score</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-extrabold text-peony-red mb-0.5">8</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Campaign Touchpoints</p>
+                    </div>
+                </div>
+
+                <!-- Content 2-Column Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-6">
+                    <div class="bg-peony-light/40 rounded-xl p-4 sm:p-5 border border-peony-pale/60 space-y-3">
+                        <h3 class="text-sm font-bold text-peony-dark uppercase tracking-wider flex items-center">
+                            <i class="fa-solid fa-bullseye mr-2 text-peony-red"></i> Challenge &amp; Positioning
+                        </h3>
+                        <div>
+                            <p class="text-xs font-bold text-peony-rose mb-0.5">Problem Statement</p>
+                            <p class="text-xs text-peony-dark/90 leading-relaxed">
+                                Desa Laksana had strong water tourism assets (Wisata Si Anyar) but minimal external brand awareness and market differentiation among potential travelers.
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-peony-rose mb-0.5">Strategic Positioning</p>
+                            <p class="text-xs text-peony-dark/90 leading-relaxed">
+                                Shifted standard tourism promotion into an issue-led campaign (#EveryDropMatters), positioning the village as a credible model of water conservation ("Arta: Arungi Tirta Anyar").
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-4 sm:p-5 border border-peony-pale space-y-3">
+                        <h3 class="text-sm font-bold text-peony-dark uppercase tracking-wider flex items-center">
+                            <i class="fa-solid fa-tasks mr-2 text-peony-red"></i> Key Execution Highlights
+                        </h3>
+                        <ul class="space-y-2 text-xs text-peony-dark/90 leading-relaxed">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-[10px]"></i>
+                                <span><strong>School Roadshow:</strong> Interactive Gen Z engagement across 7 Bandung high schools using a custom Overview Video &amp; Sonic Jingle.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-[10px]"></i>
+                                <span><strong>Expert Proof &amp; Storytelling:</strong> Hosted a webinar with ITB, Pandawara, &amp; Tirtawening experts (93% score), paired with a 25-person "Amreta" cabaret performance.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-[10px]"></i>
+                                <span><strong>Gamified D-Day &amp; Media:</strong> "Arta Waterland" booth, TITA mascot, archery game, and earned media in Tribun Jabar &amp; Pikiran Rakyat.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EARNED MEDIA COVERAGE SUB-SECTION -->
+                <div class="bg-peony-light/50 border border-peony-pale/70 rounded-xl p-4 sm:p-5 mb-6">
+                    <h3 class="text-xs font-bold text-peony-dark uppercase tracking-wider mb-3 flex items-center">
+                        <i class="fa-solid fa-newspaper text-peony-red mr-2 text-sm"></i> Earned Media Coverage
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                        <a href="https://jabar.tribunnews.com/2022/10/25/mahasiswa-fkb-telkom-university-gelar-kegiatan-tahunan-desa-wisata-berkelanjutan" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-peony-light p-3 rounded-lg border border-peony-pale/60 transition-all flex items-center gap-2.5 shadow-xs group">
+                            <i class="fa-solid fa-newspaper text-peony-rose text-base flex-shrink-0 group-hover:text-peony-red"></i>
+                            <div class="overflow-hidden">
+                                <p class="text-xs font-bold text-peony-dark group-hover:text-peony-red truncate">Pre-Launch Coverage</p>
+                                <p class="text-[11px] text-peony-rose/80 truncate">Tribunnews Jabar</p>
+                            </div>
+                        </a>
+                        <a href="https://www.pikiran-rakyat.com/pendidikan/amp/pr-015936686/kegiatan-road-to-urban-village-mahasiswa-telkom-university-mengusung-kampanye-every-drop-matters" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-peony-light p-3 rounded-lg border border-peony-pale/60 transition-all flex items-center gap-2.5 shadow-xs group">
+                            <i class="fa-solid fa-newspaper text-peony-rose text-base flex-shrink-0 group-hover:text-peony-red"></i>
+                            <div class="overflow-hidden">
+                                <p class="text-xs font-bold text-peony-dark group-hover:text-peony-red truncate">Campaign Coverage</p>
+                                <p class="text-[11px] text-peony-rose/80 truncate">Pikiran Rakyat (Every Drop Matters)</p>
+                            </div>
+                        </a>
+                        <a href="https://www.pikiran-rakyat.com/pendidikan/amp/pr-015936686/kegiatan-road-to-urban-village-mahasiswa-telkom-university-mengusung-kampanye-every-drop-matters" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-peony-light p-3 rounded-lg border border-peony-pale/60 transition-all flex items-center gap-2.5 shadow-xs group">
+                            <i class="fa-solid fa-newspaper text-peony-rose text-base flex-shrink-0 group-hover:text-peony-red"></i>
+                            <div class="overflow-hidden">
+                                <p class="text-xs font-bold text-peony-dark group-hover:text-peony-red truncate">Main Event Coverage</p>
+                                <p class="text-[11px] text-peony-rose/80 truncate">Pikiran Rakyat</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Deliverables & Media Links (Social & YouTube) -->
+                <div class="mb-5">
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <a href="https://www.instagram.com/arta__laksana?dlrf=dTBlcGpoamZxaTR4" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-brands fa-instagram text-base"></i> Visit @arta__laksana Instagram
+                        </a>
+                        <a href="https://youtube.com/@artalaksana2" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-brands fa-youtube text-base"></i> Main YouTube Channel
+                        </a>
+                        <a href="https://youtu.be/aq8QiR9nGFs?si=ao70Sc7-bcMPJftT" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-brands fa-youtube text-base"></i> Brand Activation Video
+                        </a>
+                        <a href="https://youtu.be/61ytcCyJP-Q?si=p3aZx3sGRlrBZASz" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-brands fa-youtube text-base"></i> Official Jingle
+                        </a>
+                        <a href="https://youtu.be/WiMHvvntKtI?si=LmdgP7ThhvrvYgp1" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-brands fa-youtube text-base"></i> Village Overview
+                        </a>
+                    </div>
+                    
+                    <!-- Simple Mobile Horizontal Slider & Desktop Grid for Card 2 (Pure Images without Captions) -->
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible">
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/arta/arta-1.avif" alt="Urban Village Main Key Visual Poster" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/arta/arta-2.avif" alt="Urban Village Event Activation Photo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/arta/arta-3.avif" alt="Urban Village Activation Field Work" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/arta/arta-4.avif" alt="Highschool Roadshow Campaign Presentation" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-3.5 border-t border-peony-pale/30 flex flex-wrap items-center gap-1.5">
+                    <span class="text-[11px] font-bold text-peony-dark mr-1">Skills:</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Project Management</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Brand Strategy</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Campaign Activation</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Event Planning</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Stakeholder Engagement</span>
+                </div>
+            </article>
+
+            <!-- PROJECT CARD 3: IPSMF 2021 -->
+            <article class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-peony-pale shadow-sm hover:shadow-md transition-all duration-200">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-4 pb-4 border-b border-peony-pale/40">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-vivid text-white shadow-xs">
+                            INTERNATIONAL FESTIVAL &amp; PARTNERSHIP
+                        </span>
+                        <span class="text-xs font-semibold text-peony-rose/80 bg-peony-light px-3 py-1 rounded-full border border-peony-pale/50">
+                            Head of Partnership &amp; Sponsorship | 2021
+                        </span>
+                    </div>
+                    <span class="text-xs font-medium text-peony-dark/70 flex items-center">
+                        <i class="fa-solid fa-globe mr-1.5 text-peony-red"></i> International Creator Ecosystem
+                    </span>
+                </div>
+
+                <div class="mb-5">
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-peony-dark mb-1 leading-snug">
+                        IPSMF 2021 (International Photography and Short Movie Festival)
+                    </h2>
+                    <p class="text-xs sm:text-sm font-semibold text-peony-rose/90">
+                        Global photo and short film festival partnered with the Ministry of Tourism, celebrating international heritage and identity.
+                    </p>
+                </div>
+
+                <!-- Quick Metrics Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">11.9K</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Works Submitted Worldwide</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">59</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Countries Represented</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">10+</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Sponsors &amp; Media Partners Secured</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">Ministry</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Of Tourism Endorsement &amp; Keynote Speech</p>
+                    </div>
+                </div>
+
+                <!-- Content 2-Column Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-6">
+                    <div class="bg-peony-light/40 rounded-xl p-4 sm:p-5 border border-peony-pale/60 space-y-3">
+                        <h3 class="text-sm font-bold text-peony-dark uppercase tracking-wider flex items-center">
+                            <i class="fa-solid fa-bullseye mr-2 text-peony-red"></i> Challenge &amp; Strategy
+                        </h3>
+                        <div>
+                            <p class="text-xs font-bold text-peony-rose mb-0.5">Challenge</p>
+                            <p class="text-xs text-peony-dark/90 leading-relaxed">
+                                Securing high-level funding, international media reach, and institutional credibility for a global photography and short film competition.
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-peony-rose mb-0.5">Strategic Solution</p>
+                            <p class="text-xs text-peony-dark/90 leading-relaxed">
+                                Built a high-credibility partnership strategy anchored by the Ministry of Tourism and Creative Economy (opened by Minister Sandiaga Uno), turning heritage storytelling into a global creator magnet.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-4 sm:p-5 border border-peony-pale space-y-3">
+                        <h3 class="text-sm font-bold text-peony-dark uppercase tracking-wider flex items-center">
+                            <i class="fa-solid fa-tasks mr-2 text-peony-red"></i> Key Execution Highlights
+                        </h3>
+                        <ul class="space-y-2 text-xs text-peony-dark/90 leading-relaxed">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-[10px]"></i>
+                                <span><strong>Partnership Leadership:</strong> Led the sponsorship team to secure 10+ sponsors and 10+ media partners, personally closing key deals with by.U (cash funding) and Ines Cosmetic (in-kind product sponsorship).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-[10px]"></i>
+                                <span><strong>Event Amplification:</strong> Coordinated screening, webinar exhibitions, and the Awarding Night showcase, managing multi-tier stakeholder relations across global creators and national institutional partners.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Deliverables & Media Links (Instagram Official & Recap Highlights) -->
+                <div class="mb-5">
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <a href="https://www.instagram.com/ipsmf?dlrf=MWtyMDdrdG0zM2g4Ng==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-brands fa-instagram text-base"></i> Visit @ipsmf Instagram
+                        </a>
+                        <a href="https://www.instagram.com/tv/CcNejlVphsB/?srtk=azNiZnByeXM5ZG1t" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-brands fa-instagram text-base"></i> Watch 59 Participating Countries Highlight
+                        </a>
+                    </div>
+
+                    <!-- Simple Mobile Horizontal Slider & Desktop Grid for Card 3 (Pure Images without Captions) -->
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible">
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/ipsmf/ipsmf-1.avif" alt="IPSMF Awarding Night Poster" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/ipsmf/ipsmf-2.avif" alt="Minister Keynote Opening" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/ipsmf/ipsmf-3.avif" alt="Screening and Webinar" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/ipsmf/ipsmf-4.avif" alt="Sponsorship Team" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-3.5 border-t border-peony-pale/30 flex flex-wrap items-center gap-1.5">
+                    <span class="text-[11px] font-bold text-peony-dark mr-1">Skills:</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Partnerships Acquisition</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Sponsorship Negotiation</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Event Management</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Stakeholder Engagement</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Media Relations</span>
+                </div>
+            </article>
+
+            <!-- PROJECT CARD 4: REDIAL 2.0 (WITH OFFICIAL CONCERT YOUTUBE LINK & INSTAGRAM) -->
+            <article class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-peony-pale shadow-sm hover:shadow-md transition-all duration-200">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-4 pb-4 border-b border-peony-pale/40">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-vivid text-white shadow-xs">
+                            EVENT LEADERSHIP &amp; SOCIAL IMPACT
+                        </span>
+                        <span class="text-xs font-semibold text-peony-rose/80 bg-peony-light px-3 py-1 rounded-full border border-peony-pale/50">
+                            Head of Creative Event | Oct 2022 to Feb 2023
+                        </span>
+                    </div>
+                    <span class="text-xs font-medium text-peony-dark/70 flex items-center">
+                        <i class="fa-solid fa-location-dot mr-1.5 text-peony-red"></i> Bandung, Indonesia
+                    </span>
+                </div>
+
+                <div class="mb-5">
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-peony-dark mb-1 leading-snug">
+                        REDIAL 2.0: Revival for Our Dignity
+                    </h2>
+                    <p class="text-xs sm:text-sm font-semibold text-peony-rose/90">
+                        Faculty approved disability inclusion music concert and fundraising campaign featuring Juicy Luicy.
+                    </p>
+                </div>
+
+                <!-- Quick Metrics Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">350+</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Main Event Audience</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">~65%</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Capacity Cut for COVID Safety</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">Rp1M</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Donated to Yayasan Rinjani</p>
+                    </div>
+                    <div class="bg-peony-light/60 p-3.5 rounded-xl border border-peony-pale/60 text-center flex flex-col justify-center">
+                        <p class="text-2xl sm:text-3xl font-bold text-peony-red mb-0.5">5</p>
+                        <p class="text-xs font-semibold text-peony-dark/80">Instagram Live Awareness Sessions</p>
+                    </div>
+                </div>
+
+                <!-- Content 2-Column Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-6">
+                    <div class="bg-peony-light/40 rounded-xl p-4 sm:p-5 border border-peony-pale/60 space-y-3">
+                        <h3 class="text-sm font-bold text-peony-dark uppercase tracking-wider flex items-center">
+                            <i class="fa-solid fa-bullseye mr-2 text-peony-red"></i> Challenge &amp; Strategy
+                        </h3>
+                        <div>
+                            <p class="text-xs font-bold text-peony-rose mb-0.5">Challenge</p>
+                            <p class="text-xs text-peony-dark/90 leading-relaxed">
+                                Designing a disability inclusion campus concert during COVID restrictions, requiring faculty approval and strict crowd control.
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-peony-rose mb-0.5">Strategy</p>
+                            <p class="text-xs text-peony-dark/90 leading-relaxed">
+                                Turned seating constraints (~65% reduction from 1,000 capacity) into an intimate concert concept where artists interacted directly with fans, pairing entertainment as the hook and inclusion as the core message.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-4 sm:p-5 border border-peony-pale space-y-3">
+                        <h3 class="text-sm font-bold text-peony-dark uppercase tracking-wider flex items-center">
+                            <i class="fa-solid fa-tasks mr-2 text-peony-red"></i> Key Execution Highlights
+                        </h3>
+                        <ul class="space-y-2 text-xs text-peony-dark/90 leading-relaxed">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-[10px]"></i>
+                                <span><strong>Event Leadership:</strong> Pitched and secured faculty approval, managed minute-by-minute rundowns, benchmarked talent budgets, and led 60+ committee members across 7 divisions.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-[10px]"></i>
+                                <span><strong>Pre-Event Campaign:</strong> Ran 5 Instagram Live sessions with disability advocates, school roadshows, and a themed band competition where contestants recorded inclusion songs.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-peony-red mr-2 mt-0.5 text-[10px]"></i>
+                                <span><strong>Main Event &amp; Social Impact:</strong> Hosted an inclusion talkshow with Johan Edward Tampubolon, SMKN 3 Bandung choir, student bands, Juicy Luicy headliner, and handed over Rp1,000,000 donations to Yayasan Rinjani on stage.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Deliverables & Media Links (Instagram & YouTube) -->
+                <div class="mb-5">
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <a href="https://www.instagram.com/officialredial?dlrf=MTFvcW03NjIxY2IwYQ==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-brands fa-instagram text-base"></i> Visit @officialredial Instagram
+                        </a>
+                        <a href="https://youtu.be/oGAVUHm8w1w?si=glYheqSY7G7eZF7M" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-[#FFF0F6] to-[#FCD4E6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white transition-all duration-300 shadow-sm text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                            <i class="fa-brands fa-youtube text-base"></i> Watch REDIAL 2.0 Official Concert Highlights
+                        </a>
+                    </div>
+
+                    <!-- Simple Mobile Horizontal Slider & Desktop Grid for Card 4 (Pure Images without Captions) -->
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible">
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/redial/redial-1.avif" alt="Juicy Luicy Main Event" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/redial/redial-2.avif" alt="Revive Campaign" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/redial/redial-3.avif" alt="Donation Handover" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-shrink-0 w-[280px] sm:w-auto snap-center aspect-video rounded-xl overflow-hidden border border-[#F8A8CC] bg-white shadow-xs">
+                            <img src="assets/projects/redial/redial-4.avif" alt="Committee Talkshow" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-3.5 border-t border-peony-pale/30 flex flex-wrap items-center gap-1.5">
+                    <span class="text-[11px] font-bold text-peony-dark mr-1">Skills:</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Event Management</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Creative Direction</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Project Management</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Stakeholder Engagement</span>
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-peony-light text-peony-dark border border-peony-pale/60">Social Impact Strategy</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ================= SECTION: GLOBAL CTA & FOOTER (FLOWS DIRECTLY FROM CARD 4) ================= -->
+    <footer id="contact-cta" class="bg-peony-dark text-white rounded-t-[2rem] sm:rounded-t-[3rem] pt-10 sm:pt-14 pb-6 border-t border-peony-rose/30 shadow-2xl relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- MAIN CTA BANNER CARD -->
+            <div class="bg-peony-rose/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-peony-pale/20 shadow-xl mb-8 sm:mb-10 backdrop-blur-sm relative overflow-hidden">
+                <div class="relative z-10 text-center max-w-3xl mx-auto space-y-4">
+                    <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-vivid/30 text-peony-blush border border-peony-pale/30">
+                        LET'S CONNECT
+                    </span>
+
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                        Ready to Elevate Your Brand &amp; Corporate Strategy?
+                    </h2>
+
+                    <p class="text-sm sm:text-base text-peony-blush/90 font-normal leading-relaxed">
+                        Whether you have an upcoming project, media relations inquiry, or career opportunity, I am always open to discussing strategic communication solutions that drive real impact.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                        <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#FFFFFF] to-[#FFF0F6] text-[#780830] border border-[#F8A8CC] hover:from-[#FCD4E6] hover:to-[#FFFFFF] rounded-full shadow-md transition-all duration-300">
+                            <i class="fa-brands fa-whatsapp text-lg mr-2 text-[#B01050]"></i> Direct Chat (WhatsApp)
+                        </a>
+                        <a href="assets/CV_Devina_Dhea_Pabundu.pdf" download class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#FFFFFF] to-[#FFF0F6] text-[#4A0818] hover:from-[#FCD4E6] hover:to-[#FFFFFF] rounded-full shadow-md transition-all duration-300">
+                            <i class="fa-solid fa-file-arrow-down text-base mr-2 text-[#B01050]"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIRECT CONTACT & SOCIAL MEDIA GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 mb-10">
+                <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" class="bg-peony-rose/30 hover:bg-peony-rose/60 border border-peony-pale/20 hover:border-peony-pale/50 rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] group-hover:from-[#B01050] group-hover:to-[#780830] group-hover:text-white flex items-center justify-center text-lg mb-3 border border-peony-pale/30 transition-all duration-300">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">WhatsApp Direct</p>
+                        <p class="text-sm font-bold text-white group-hover:text-peony-blush transition-colors">+62 812-3541-4147</p>
+                    </div>
+                </a>
+
+                <a href="mailto:devinadheaa@gmail.com" class="bg-peony-rose/30 hover:bg-peony-rose/60 border border-peony-pale/20 hover:border-peony-pale/50 rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] group-hover:from-[#B01050] group-hover:to-[#780830] group-hover:text-white flex items-center justify-center text-lg mb-3 border border-peony-pale/30 transition-all duration-300">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">Email Address</p>
+                        <p class="text-sm font-bold text-white group-hover:text-peony-blush transition-colors truncate">devinadheaa@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" class="bg-peony-rose/30 hover:bg-peony-rose/60 border border-peony-pale/20 hover:border-peony-pale/50 rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] group-hover:from-[#B01050] group-hover:to-[#780830] group-hover:text-white flex items-center justify-center text-lg mb-3 border border-peony-pale/30 transition-all duration-300">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">LinkedIn Profile</p>
+                        <p class="text-sm font-bold text-white group-hover:text-peony-blush transition-colors truncate">linkedin.com/in/devinadheap</p>
+                    </div>
+                </a>
+
+                <div class="bg-peony-rose/30 border border-peony-pale/20 rounded-2xl p-4 sm:p-5 flex flex-col justify-between">
+                    <div class="w-10 h-10 rounded-xl bg-peony-red/30 text-peony-blush flex items-center justify-center text-lg mb-3 border border-peony-pale/30">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">Current Base</p>
+                        <p class="text-sm font-bold text-white">Surabaya &amp; Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUB-FOOTER / COPYRIGHT ROW -->
+            <div class="flex flex-col sm:flex-row items-center justify-between border-t border-white/10 pt-6 gap-3">
+                <p class="text-xs text-peony-blush/70 font-medium text-center sm:text-left">
+                    &copy; 2026 Devina Dhea Pabundu. All Rights Reserved.
+                </p>
+
+                <a href="#" class="inline-flex items-center space-x-2 text-xs font-semibold bg-gradient-to-r from-[#FFFFFF] to-[#FFF0F6] text-[#4A0818] hover:from-[#FCD4E6] hover:to-[#FFFFFF] px-4 py-1.5 rounded-full shadow-sm transition-all duration-300">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up text-[10px] text-[#B01050]"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    hamburgerIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

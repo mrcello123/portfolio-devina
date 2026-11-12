@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devina Dhea Pabundu - Overview</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Color Customization & Font Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        peony: {
+                            red: '#B01050',
+                            dark: '#4A0818',
+                            rose: '#780830',
+                            vivid: '#D84080',
+                            blush: '#FCD4E6',
+                            pale: '#F8A8CC',
+                            light: '#FFF0F6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-peony-dark font-sans antialiased selection:bg-peony-vivid selection:text-white">
+
+    <!-- ================= NAVBAR / HEADER (Sticky Top, Background Pure White #FFFFFF) ================= -->
+    <header class="sticky top-0 z-50 bg-white border-b border-peony-pale/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+
+            <!-- Sisi Kiri: Teks Name (Bold) -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="text-lg sm:text-xl font-bold text-peony-dark tracking-tight hover:text-peony-red transition-colors">
+                    Devina Dhea Pabundu
+                </a>
+            </div>
+
+            <!-- Tengah (Tampilan Desktop): Navigasi Link -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                <!-- Active State for Overview -->
+                <a href="index.html" class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] rounded-full shadow-sm">
+                    Overview
+                </a>
+                <a href="experience.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-gradient-to-r hover:from-[#FCD4E6] hover:to-[#FFF0F6] rounded-full transition-all">
+                    Work Experience
+                </a>
+                <a href="projects.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-gradient-to-r hover:from-[#FCD4E6] hover:to-[#FFF0F6] rounded-full transition-all">
+                    Projects &amp; Impact
+                </a>
+            </nav>
+
+            <!-- Sisi Kanan (Tampilan Desktop): Social Icons & CTA Button -->
+            <div class="hidden md:flex items-center space-x-3 sm:space-x-4">
+                <!-- Social Media Icons (Gradient Button) -->
+                <div class="flex items-center space-x-2 pr-2 border-r border-peony-pale/50">
+                    <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300 shadow-xs">
+                        <i class="fa-brands fa-linkedin-in text-base"></i>
+                    </a>
+                    <a href="mailto:devinadheaa@gmail.com" aria-label="Email" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300 shadow-xs">
+                        <i class="fa-regular fa-envelope text-base"></i>
+                    </a>
+                    <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300 shadow-xs">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                    </a>
+                </div>
+
+                <!-- Tombol CTA Primary Gradient -->
+                <a href="#contact-cta" class="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] text-white shadow-md hover:shadow-lg hover:opacity-95 rounded-full transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+
+            <!-- Tombol Mobile Hamburger Menu -->
+            <div class="flex md:hidden items-center">
+                <button id="mobile-menu-button" type="button" aria-label="Toggle Navigation Menu" class="w-10 h-10 inline-flex items-center justify-center rounded-lg text-peony-dark hover:text-peony-red hover:bg-peony-light focus:outline-none transition-colors">
+                    <i id="hamburger-icon" class="fa-solid fa-bars text-xl"></i>
+                    <i id="close-icon" class="fa-solid fa-xmark text-2xl hidden"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-peony-pale/40 bg-white px-4 pt-3 pb-5 space-y-3 shadow-lg">
+            <div class="flex flex-col space-y-1.5">
+                <a href="index.html" class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] rounded-xl">
+                    Overview
+                </a>
+                <a href="experience.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-peony-light/50 rounded-xl transition-colors">
+                    Work Experience
+                </a>
+                <a href="projects.html" class="px-4 py-2 text-sm font-medium text-peony-dark/80 hover:text-peony-rose hover:bg-peony-light/50 rounded-xl transition-colors">
+                    Projects &amp; Impact
+                </a>
+            </div>
+
+            <div class="border-t border-peony-pale/30 pt-3">
+                <div class="flex items-center justify-center space-x-4 mb-3">
+                    <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                        <i class="fa-brands fa-linkedin-in text-base"></i>
+                    </a>
+                    <a href="mailto:devinadheaa@gmail.com" aria-label="Email" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                        <i class="fa-regular fa-envelope text-base"></i>
+                    </a>
+                    <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                    </a>
+                </div>
+
+                <a href="#contact-cta" class="w-full inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] text-white shadow-md rounded-xl transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION (Layout 2 Kolom Responsive, Background Pure White #FFFFFF) ================= -->
+    <section class="bg-white py-6 sm:py-8 lg:py-10 overflow-hidden relative">
+        <!-- Background Accent Graphic 1 (Hero Top Right) -->
+        <img src="assets/decorations/flower-accent.avif" alt="Flower Accent" class="absolute -top-6 -right-6 w-36 h-36 opacity-20 -rotate-12 pointer-events-none z-0">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+
+                <!-- Kolom Kiri (Teks & Information) -->
+                <div class="lg:col-span-7 flex flex-col items-start space-y-3 sm:space-y-3.5">
+                    
+                    <!-- Pill Badges Kecil Statis (Top) -->
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale/70">
+                            Master of Communication – UI
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale/70">
+                            BI Scholarship Awardee
+                        </span>
+                    </div>
+
+                    <!-- Header / Title -->
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-peony-dark tracking-tight leading-tight">
+                        Devina Dhea Pabundu
+                    </h1>
+
+                    <!-- Teks Paragraf -->
+                    <p class="text-sm sm:text-base text-peony-rose/90 font-normal leading-relaxed max-w-2xl">
+                        Transforming complex and creative ideas into Marketing Communications & Public Relations solutions with measurable impact. I combine strategic communication, data-backed insights, and project coordination to deliver end-to-end brand campaigns, stakeholder relations, and events that solve real business challenges.
+                    </p>
+
+                    <!-- 2 Tombol CTA -->
+                    <div class="flex flex-wrap items-center gap-3 pt-1">
+                        <!-- Primary Button (Gradient) -->
+                        <a href="experience.html" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] text-white shadow-md hover:shadow-lg hover:opacity-95 rounded-full transition-all duration-300">
+                            Explore Work <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                        <!-- Secondary Button (Gradient Soft) -->
+                        <a href="#contact-cta" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#FCD4E6] to-[#FFF0F6] text-[#780830] border border-[#F8A8CC] hover:bg-gradient-to-r hover:from-[#B01050] hover:to-[#D84080] hover:text-white rounded-full shadow-xs transition-all duration-300">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <!-- REPLACEMENT CORE EXPERTISE GRID (Di Bawah Tombol CTA) -->
+                    <div class="w-full pt-3 border-t border-peony-pale/40">
+                        <p class="text-[11px] font-bold text-peony-dark uppercase tracking-wider mb-2">Core Expertise Pillars</p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
+                            
+                            <!-- Pillar 1: Strategic Communications -->
+                            <div class="bg-peony-light/50 p-2.5 rounded-xl border border-peony-pale/60 hover:border-peony-red/40 transition-colors">
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <div class="w-5 h-5 rounded-md bg-peony-blush text-peony-red flex items-center justify-center text-[10px] font-bold">
+                                        <i class="fa-solid fa-bullseye"></i>
+                                    </div>
+                                    <h3 class="text-xs font-bold text-peony-dark">Strategic Communications</h3>
+                                </div>
+                                <p class="text-[11px] text-peony-rose/90 font-medium leading-snug pl-7">
+                                    Campaign Strategy &middot; Corporate Reputation &middot; Key Performance Indicators (KPIs)
+                                </p>
+                            </div>
+
+                            <!-- Pillar 2: Stakeholder Management -->
+                            <div class="bg-peony-light/50 p-2.5 rounded-xl border border-peony-pale/60 hover:border-peony-red/40 transition-colors">
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <div class="w-5 h-5 rounded-md bg-peony-blush text-peony-red flex items-center justify-center text-[10px] font-bold">
+                                        <i class="fa-solid fa-handshake"></i>
+                                    </div>
+                                    <h3 class="text-xs font-bold text-peony-dark">Stakeholder Management</h3>
+                                </div>
+                                <p class="text-[11px] text-peony-rose/90 font-medium leading-snug pl-7">
+                                    Partnerships &middot; Sponsorship Acquisition &middot; Community Engagement
+                                </p>
+                            </div>
+
+                            <!-- Pillar 3: Content Strategy -->
+                            <div class="bg-peony-light/50 p-2.5 rounded-xl border border-peony-pale/60 hover:border-peony-red/40 transition-colors">
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <div class="w-5 h-5 rounded-md bg-peony-blush text-peony-red flex items-center justify-center text-[10px] font-bold">
+                                        <i class="fa-solid fa-pen-nib"></i>
+                                    </div>
+                                    <h3 class="text-xs font-bold text-peony-dark">Content Strategy</h3>
+                                </div>
+                                <p class="text-[11px] text-peony-rose/90 font-medium leading-snug pl-7">
+                                    Storytelling &middot; Copywriting &middot; Social Media Marketing
+                                </p>
+                            </div>
+
+                            <!-- Pillar 4: Media Relations -->
+                            <div class="bg-peony-light/50 p-2.5 rounded-xl border border-peony-pale/60 hover:border-peony-red/40 transition-colors">
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <div class="w-5 h-5 rounded-md bg-peony-blush text-peony-red flex items-center justify-center text-[10px] font-bold">
+                                        <i class="fa-solid fa-newspaper"></i>
+                                    </div>
+                                    <h3 class="text-xs font-bold text-peony-dark">Media Relations</h3>
+                                </div>
+                                <p class="text-[11px] text-peony-rose/90 font-medium leading-snug pl-7">
+                                    Journalist Engagement &middot; Press Releases &middot; Earned Media
+                                </p>
+                            </div>
+
+                            <!-- Pillar 5: Event Management -->
+                            <div class="bg-peony-light/50 p-2.5 rounded-xl border border-peony-pale/60 hover:border-peony-red/40 transition-colors sm:col-span-2">
+                                <div class="flex items-center space-x-2 mb-1">
+                                    <div class="w-5 h-5 rounded-md bg-peony-blush text-peony-red flex items-center justify-center text-[10px] font-bold">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                    </div>
+                                    <h3 class="text-xs font-bold text-peony-dark">Event Management</h3>
+                                </div>
+                                <p class="text-[11px] text-peony-rose/90 font-medium leading-snug pl-7">
+                                    Project Management &middot; Brand Activation &middot; Event Planning & Execution
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Kolom Kanan (Gambar / Foto Profile) -->
+                <div class="lg:col-span-5 flex justify-center lg:justify-end lg:sticky lg:top-24">
+                    <div class="relative w-full max-w-xs sm:max-w-sm lg:max-w-md">
+                        <!-- Frame/Container Foto Ringkas -->
+                        <div class="relative rounded-3xl bg-white p-1.5 border border-peony-pale/50 shadow-md">
+                            <img src="assets/images/devina-profile.avif" alt="Devina Dhea Pabundu" class="w-full aspect-[4/5] rounded-[1.8rem] border border-peony-pale/60 object-cover shadow-lg">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION: IMPACT IN NUMBERS ================= -->
+    <section class="bg-peony-light py-6 sm:py-8 lg:py-10 border-t border-b border-peony-pale/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+                <!-- Pill Tag Kecil Statis (Top) -->
+                <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-blush/80 text-peony-rose border border-peony-pale/80 mb-3">
+                    TRACK RECORD
+                </span>
+                
+                <!-- Main Title -->
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-peony-dark tracking-tight mb-2">
+                    Impact in Numbers
+                </h2>
+                
+                <!-- Sub-text (Revised) -->
+                <p class="text-sm sm:text-base text-peony-rose/90 font-normal leading-relaxed">
+                    Outcomes from campaigns, media programs, and brand activations I've led from strategy to execution.
+                </p>
+            </div>
+
+            <!-- Grid Layout (Responsive 5 Cards Grid) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
+                
+                <!-- CARD 1: ACADEMIC EXCELLENCE (Revised to exact 3 lines) -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-peony-light text-peony-red flex items-center justify-center text-lg mb-4 border border-peony-pale/50">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-peony-dark leading-snug mb-1.5">
+                            Academic Excellence
+                        </h3>
+                    </div>
+                    <p class="text-xs text-peony-rose/85 font-medium leading-relaxed pt-2 border-t border-peony-pale/30 space-y-1">
+                        <span class="block">M.Sc. in Communication, University of Indonesia</span>
+                        <span class="block">B.Comm, Telkom University</span>
+                        <span class="block">Central Bank of Indonesia Scholarship (2022-2023)</span>
+                    </p>
+                </div>
+
+                <!-- CARD 2: END TO END PROJECTS (Revised to plural 'projects') -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-peony-light text-peony-red flex items-center justify-center text-lg mb-4 border border-peony-pale/50">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-peony-dark leading-snug mb-1.5">
+                            6+ End-to-End Projects
+                        </h3>
+                    </div>
+                    <p class="text-xs text-peony-rose/85 font-medium leading-relaxed pt-2 border-t border-peony-pale/30">
+                        Brand Communications &bull; Marketing Campaign & B2B &bull; Crisis & Reputation &bull; Event Management &bull; Media Relations
+                    </p>
+                </div>
+
+                <!-- CARD 3: YOY GROWTH -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-peony-light text-peony-red flex items-center justify-center text-lg mb-4 border border-peony-pale/50">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-peony-dark leading-snug mb-1.5">
+                            +224% Year-on-Year Growth
+                        </h3>
+                    </div>
+                    <p class="text-xs text-peony-rose/85 font-medium leading-relaxed pt-2 border-t border-peony-pale/30">
+                        Project & Campaign Submission Growth
+                    </p>
+                </div>
+
+                <!-- CARD 4: JOURNALISTS ENGAGED -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-peony-light text-peony-red flex items-center justify-center text-lg mb-4 border border-peony-pale/50">
+                            <i class="fa-solid fa-newspaper"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-peony-dark leading-snug mb-1.5">
+                            300+ Journalists Engaged
+                        </h3>
+                    </div>
+                    <p class="text-xs text-peony-rose/85 font-medium leading-relaxed pt-2 border-t border-peony-pale/30">
+                        One-to-One Media Outreach
+                    </p>
+                </div>
+
+                <!-- CARD 5: PRODUCTS SOLD -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-peony-light text-peony-red flex items-center justify-center text-lg mb-4 border border-peony-pale/50">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-peony-dark leading-snug mb-1.5">
+                            500+ Products Sold in 48 Hours
+                        </h3>
+                    </div>
+                    <p class="text-xs text-peony-rose/85 font-medium leading-relaxed pt-2 border-t border-peony-pale/30">
+                        Beauty Brand Campaign
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SECTION: ABOUT ME ================= -->
+    <section id="about-me" class="bg-white py-6 sm:py-8 lg:py-10 border-b border-peony-pale/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+                <!-- Pill Tag Kecil Statis (Top) -->
+                <span class="inline-flex items-center px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-blush text-peony-rose border border-peony-pale mb-3">
+                    GET TO KNOW ME
+                </span>
+                
+                <!-- Main Title -->
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-peony-dark tracking-tight">
+                    About Me
+                </h2>
+            </div>
+
+            <!-- 1. PHILOSOPHY & STORY STATEMENT BOX (Bold first sentence & no quote icons) -->
+            <div class="bg-peony-light/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-peony-pale shadow-sm mb-8 sm:mb-10 relative overflow-hidden">
+                <!-- Background Accent Graphic 2 (Philosophy Card Bottom Left) -->
+                <img src="assets/decorations/flower-accent.avif" alt="Flower Accent" class="absolute -bottom-6 -left-6 w-28 h-28 opacity-15 rotate-45 pointer-events-none z-0">
+
+                <div class="max-w-4xl mx-auto relative z-10">
+                    <div class="space-y-3 sm:space-y-4 text-sm sm:text-base text-peony-dark/90 leading-relaxed font-normal">
+                        <p class="font-extrabold text-peony-dark">
+                            I am driven by one question: what makes people care enough to act?
+                        </p>
+                        <p>
+                            Before a single slide is drafted or designed, I put myself in the audience's seat, whether it's a client, partner, or customer.
+                        </p>
+                        <p>
+                            Then I listen for the questions they'd never say out loud. Why should I care? Is this really worth my time? And what do I get here that I can't find anywhere else?
+                        </p>
+                        <p class="font-medium text-peony-rose">
+                            Most communication starts with what a brand wants to say. Mine starts with what people need to hear and works backward from there. That's how I approach marketing communications, PR, and every campaign or project I'm trusted with.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. EDUCATION GRID (2 CARDS REVISED) -->
+            <div class="mt-8 sm:mt-12 pt-6 border-t border-peony-pale/30 mb-8 sm:mb-10">
+                <div class="flex items-center space-x-2.5 mb-4">
+                    <div class="w-7 h-7 rounded-lg bg-peony-blush text-peony-red flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-peony-dark">Education Background</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <!-- Card 1: Universitas Indonesia (Revised program & GPA) -->
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-peony-pale shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-peony-blush text-peony-rose">
+                                    Master's Degree
+                                </span>
+                                <span class="text-xs font-semibold text-peony-rose/80">
+                                    2024 - 2026
+                                </span>
+                            </div>
+                            <h4 class="text-lg font-bold text-peony-dark mb-1">Universitas Indonesia</h4>
+                            <p class="text-xs sm:text-sm font-semibold text-peony-red mb-3">Master of Communication Management, Marketing & Public Relations</p>
+                            
+                            <!-- Coursework / Subjects Taken -->
+                            <div class="mb-3">
+                                <p class="text-[11px] font-bold text-peony-dark uppercase tracking-wider mb-2">Subjects Taken:</p>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Media Perspectives and Studies</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Ethics of Communication</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Digital Marketing Planning and Strategy</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Marketing Communication</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Communication Industry and Technology</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Marketing Communication Management and Crisis Communication Management</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-peony-pale/40 flex items-center justify-between text-xs font-bold text-peony-dark">
+                            <span>Academic Result</span>
+                            <span class="px-2.5 py-0.5 rounded-lg bg-peony-light text-peony-red border border-peony-pale/60">GPA: 3.74 / 4.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Telkom University -->
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-peony-pale shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-peony-blush text-peony-rose">
+                                    Bachelor's Degree
+                                </span>
+                                <span class="text-xs font-semibold text-peony-rose/80">
+                                    2020 - 2023
+                                </span>
+                            </div>
+                            <h4 class="text-lg font-bold text-peony-dark mb-1">Telkom University</h4>
+                            <p class="text-xs sm:text-sm font-semibold text-peony-red mb-2.5">Bachelor's Degree in Digital Marketing Communications</p>
+                            
+                            <div class="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-semibold bg-peony-light text-peony-rose border border-peony-pale/60 mb-3">
+                                <i class="fa-solid fa-award mr-1.5 text-peony-red"></i> Bank Indonesia Scholarship Awardee (2 Years)
+                            </div>
+
+                            <!-- Coursework / Subjects Taken -->
+                            <div class="mb-3">
+                                <p class="text-[11px] font-bold text-peony-dark uppercase tracking-wider mb-2">Subjects Taken:</p>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">International Communication</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Communication Management</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Communication Audit</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Brand Communication</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Social Media Engagement</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Consumer Behavior</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Business Communication</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-peony-light text-peony-dark/90 border border-peony-pale/50">Event Management</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-peony-pale/40 flex items-center justify-between text-xs font-bold text-peony-dark">
+                            <span>Academic Result</span>
+                            <span class="px-2.5 py-0.5 rounded-lg bg-peony-light text-peony-red border border-peony-pale/60">GPA: 3.85 / 4.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. HARD SKILLS & SOFT SKILLS -->
+            <div class="mb-8 sm:mb-10">
+                <div class="flex items-center space-x-2.5 mb-4">
+                    <div class="w-7 h-7 rounded-lg bg-peony-blush text-peony-red flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-peony-dark">Skills & Competencies</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <!-- Hard Skills -->
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-peony-pale shadow-sm">
+                        <h4 class="text-xs sm:text-sm font-bold text-peony-dark uppercase tracking-wider mb-3 flex items-center">
+                            <i class="fa-solid fa-gears mr-2 text-peony-red"></i> Hard Skills
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Corporate Communications</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Public Relations (PR)</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Media Relations</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Crisis Communications</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Marketing Communications</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Campaign Management</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Social Media Marketing</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Content Strategy</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Event Management</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-light text-peony-dark border border-peony-pale/70">Strategic Partnerships</span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-peony-pale shadow-sm">
+                        <h4 class="text-xs sm:text-sm font-bold text-peony-dark uppercase tracking-wider mb-3 flex items-center">
+                            <i class="fa-solid fa-lightbulb mr-2 text-peony-red"></i> Soft Skills
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Strategic Thinking</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Stakeholder Management</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Team Leadership</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Creative Problem Solving</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Negotiation</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Analytical Skills</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Cross-functional Collaboration</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Attention to Detail</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Adaptability</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-peony-blush/60 text-peony-rose border border-peony-pale">Relationship Building</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. TOOLS & SOFTWARE (10 CLEAN IMAGE PLACEHOLDERS GRID) -->
+            <div class="mb-8 sm:mb-10">
+                <div class="flex items-center space-x-2.5 mb-4">
+                    <div class="w-7 h-7 rounded-lg bg-peony-blush text-peony-red flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-toolbox"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-peony-dark">Tools &amp; Software</h3>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
+                    <!-- 1. Figma -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/figma.avif" alt="Figma" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">Figma</p>
+                    </div>
+
+                    <!-- 2. Adobe Illustrator -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/illustrator.avif" alt="Adobe Illustrator" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">Adobe Illustrator</p>
+                    </div>
+
+                    <!-- 3. Adobe Photoshop -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/photoshop.avif" alt="Adobe Photoshop" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">Adobe Photoshop</p>
+                    </div>
+
+                    <!-- 4. Canva -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/canva.avif" alt="Canva" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">Canva</p>
+                    </div>
+
+                    <!-- 5. CapCut -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/capcut.avif" alt="CapCut" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">CapCut</p>
+                    </div>
+
+                    <!-- 6. Excel -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/excel.avif" alt="Excel" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">Excel</p>
+                    </div>
+
+                    <!-- 7. Word -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/word.avif" alt="Word" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">Word</p>
+                    </div>
+
+                    <!-- 8. NVivo -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/nvivo.avif" alt="NVivo" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">NVivo</p>
+                    </div>
+
+                    <!-- 9. AMEC -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/amec.avif" alt="AMEC" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">AMEC Framework</p>
+                    </div>
+
+                    <!-- 10. Sprout Social -->
+                    <div class="bg-white rounded-2xl p-4 border border-peony-pale text-center shadow-xs">
+                        <img src="assets/tools/sproutsocial.avif" alt="Sprout Social" class="w-10 h-10 object-contain mx-auto mb-2">
+                        <p class="text-xs font-bold text-peony-dark">Sprout Social</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. LANGUAGES -->
+            <div>
+                <div class="flex items-center space-x-2.5 mb-4">
+                    <div class="w-7 h-7 rounded-lg bg-peony-blush text-peony-red flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-peony-dark">Languages</h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Indonesian -->
+                    <div class="bg-white rounded-2xl p-4 sm:p-5 border border-peony-pale shadow-sm flex items-center justify-between">
+                        <div>
+                            <h4 class="text-base font-bold text-peony-dark">Indonesian</h4>
+                            <p class="text-xs font-semibold text-peony-rose/80">Native / Professional Proficiency</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full bg-peony-light text-peony-red flex items-center justify-center text-xs font-bold">
+                            ID
+                        </span>
+                    </div>
+
+                    <!-- English -->
+                    <div class="bg-white rounded-2xl p-4 sm:p-5 border border-peony-pale shadow-sm flex items-center justify-between">
+                        <div>
+                            <h4 class="text-base font-bold text-peony-dark">English</h4>
+                            <p class="text-xs font-semibold text-peony-rose/80">Professional Working Proficiency (EPT Score: 510)</p>
+                        </div>
+                        <span class="w-9 h-9 rounded-full bg-peony-light text-peony-red flex items-center justify-center text-xs font-bold">
+                            EN
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SECTION: RECOMMENDED BY ================= -->
+    <section id="recommendations" class="bg-peony-light/50 py-6 sm:py-8 lg:py-10 border-b border-peony-pale/50 relative overflow-hidden">
+        <!-- Background Accent Graphic 3 (Recommended By Top Right) -->
+        <img src="assets/decorations/flower-accent.avif" alt="Flower Accent" class="absolute top-4 right-4 sm:right-12 w-44 h-44 opacity-15 rotate-12 pointer-events-none z-0">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+                <!-- Pill Tag Kecil Statis (Top) -->
+                <span class="inline-flex items-center px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-blush text-peony-rose border border-peony-pale mb-3">
+                    LINKEDIN RECOMMENDATIONS
+                </span>
+                
+                <!-- Main Title -->
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-peony-dark tracking-tight mb-2">
+                    Recommended By
+                </h2>
+
+                <!-- Sub-text -->
+                <p class="text-sm sm:text-base text-peony-rose/90 font-normal leading-relaxed">
+                    What my managers and mentors say about our professional collaboration.
+                </p>
+            </div>
+
+            <!-- 6 Cards Responsive Grid (1 Kolom Mobile, 2 Kolom Tablet, 3 Kolom Desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-6">
+                
+                <!-- CARD 1: REMBIANOV -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between relative group">
+                    <div>
+                        <!-- Top Row: Profile Image & Role Info -->
+                        <div class="flex items-start space-x-3 mb-3.5">
+                            <img src="assets/testimonials/rembianov.avif" alt="Rembianov" class="w-12 h-12 rounded-full object-cover border border-peony-pale flex-shrink-0">
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-sm sm:text-base font-bold text-peony-dark truncate">
+                                    Rembianov
+                                </h3>
+                                <p class="text-xs font-medium text-peony-rose/80 line-clamp-2 leading-snug">
+                                    Corporate Communications Analyst, PT Astra International Tbk
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Role Tag Badge Statis -->
+                        <div class="mb-3">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider uppercase bg-peony-blush/70 text-peony-rose border border-peony-pale/60">
+                                MENTOR &middot; ASTRA INTERNATIONAL &amp; FIFGROUP
+                            </span>
+                        </div>
+
+                        <!-- Middle Quote Text -->
+                        <div class="relative">
+                            <i class="fa-solid fa-quote-left text-peony-blush text-lg mb-1 block"></i>
+                            <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed italic font-normal">
+                                "Throughout our collaboration at FIFGROUP and Astra Financial, she has proven to be a reliable professional with proactive communication skills and the ability to build effective working relationships."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom LinkedIn Verification Link Button (Gradient Hover) -->
+                    <div class="pt-3 mt-4 border-t border-peony-pale/30 flex items-center justify-between text-[11px] font-semibold text-peony-dark/60">
+                        <span class="flex items-center text-peony-rose/70">
+                            <i class="fa-solid fa-circle-check text-peony-red mr-1.5"></i> Verified Recommendation
+                        </span>
+                        <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-7 h-7 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 2: GANJAR WIJAYA -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between relative group">
+                    <div>
+                        <!-- Top Row: Profile Image & Role Info -->
+                        <div class="flex items-start space-x-3 mb-3.5">
+                            <img src="assets/testimonials/ganjar-wijaya.avif" alt="Ganjar Wijaya" class="w-12 h-12 rounded-full object-cover border border-peony-pale flex-shrink-0">
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-sm sm:text-base font-bold text-peony-dark truncate">
+                                    Ganjar Wijaya
+                                </h3>
+                                <p class="text-xs font-medium text-peony-rose/80 line-clamp-2 leading-snug">
+                                    Corporate Communication Officer, FIFGROUP
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Role Tag Badge Statis -->
+                        <div class="mb-3">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider uppercase bg-peony-blush/70 text-peony-rose border border-peony-pale/60">
+                                MENTOR &middot; FIFGROUP
+                            </span>
+                        </div>
+
+                        <!-- Middle Quote Text -->
+                        <div class="relative">
+                            <i class="fa-solid fa-quote-left text-peony-blush text-lg mb-1 block"></i>
+                            <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed italic font-normal">
+                                "She demonstrated strong communication skills, creativity, and a proactive attitude while contributing to media relations, content development, press releases, and corporate events."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom LinkedIn Verification Link Button (Gradient Hover) -->
+                    <div class="pt-3 mt-4 border-t border-peony-pale/30 flex items-center justify-between text-[11px] font-semibold text-peony-dark/60">
+                        <span class="flex items-center text-peony-rose/70">
+                            <i class="fa-solid fa-circle-check text-peony-red mr-1.5"></i> Verified Recommendation
+                        </span>
+                        <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-7 h-7 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 3: GIOVANI YUDHA -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between relative group">
+                    <div>
+                        <!-- Top Row: Profile Image & Role Info -->
+                        <div class="flex items-start space-x-3 mb-3.5">
+                            <img src="assets/testimonials/giovani-yudha.avif" alt="Giovani Yudha" class="w-12 h-12 rounded-full object-cover border border-peony-pale flex-shrink-0">
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-sm sm:text-base font-bold text-peony-dark truncate">
+                                    Giovani Yudha
+                                </h3>
+                                <p class="text-xs font-medium text-peony-rose/80 line-clamp-2 leading-snug">
+                                    Officer II, SME Program (PFpreneur)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Role Tag Badge Statis -->
+                        <div class="mb-3">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider uppercase bg-peony-blush/70 text-peony-rose border border-peony-pale/60">
+                                MENTOR &middot; PERTAMINA FOUNDATION
+                            </span>
+                        </div>
+
+                        <!-- Middle Quote Text -->
+                        <div class="relative">
+                            <i class="fa-solid fa-quote-left text-peony-blush text-lg mb-1 block"></i>
+                            <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed italic font-normal">
+                                "What sets Dhea apart is her ability to think strategically about communication, not just write well... she consistently delivered at a standard I would expect from a seasoned professional."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom LinkedIn Verification Link Button (Gradient Hover) -->
+                    <div class="pt-3 mt-4 border-t border-peony-pale/30 flex items-center justify-between text-[11px] font-semibold text-peony-dark/60">
+                        <span class="flex items-center text-peony-rose/70">
+                            <i class="fa-solid fa-circle-check text-peony-red mr-1.5"></i> Verified Recommendation
+                        </span>
+                        <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-7 h-7 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 4: ROBERTUS BENNY D KOESTANTO -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between relative group">
+                    <div>
+                        <!-- Top Row: Profile Image & Role Info -->
+                        <div class="flex items-start space-x-3 mb-3.5">
+                            <img src="assets/testimonials/robertus-benny.avif" alt="Robertus Benny D Koestanto" class="w-12 h-12 rounded-full object-cover border border-peony-pale flex-shrink-0">
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-sm sm:text-base font-bold text-peony-dark truncate">
+                                    Robertus Benny D Koestanto
+                                </h3>
+                                <p class="text-xs font-medium text-peony-rose/80 line-clamp-2 leading-snug">
+                                    Corporate Communication Department Head, FIFGROUP
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Role Tag Badge Statis -->
+                        <div class="mb-3">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider uppercase bg-peony-blush/70 text-peony-rose border border-peony-pale/60">
+                                DIRECT MANAGER &middot; FIFGROUP
+                            </span>
+                        </div>
+
+                        <!-- Middle Quote Text -->
+                        <div class="relative">
+                            <i class="fa-solid fa-quote-left text-peony-blush text-lg mb-1 block"></i>
+                            <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed italic font-normal">
+                                "During her time with us, she managed the development of a Crisis Communication Handling Book, maintained relationships with journalists, wrote press releases..."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom LinkedIn Verification Link Button (Gradient Hover) -->
+                    <div class="pt-3 mt-4 border-t border-peony-pale/30 flex items-center justify-between text-[11px] font-semibold text-peony-dark/60">
+                        <span class="flex items-center text-peony-rose/70">
+                            <i class="fa-solid fa-circle-check text-peony-red mr-1.5"></i> Verified Recommendation
+                        </span>
+                        <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-7 h-7 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 5: RIZQI UTHAMA -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between relative group">
+                    <div>
+                        <!-- Top Row: Profile Image & Role Info -->
+                        <div class="flex items-start space-x-3 mb-3.5">
+                            <img src="assets/testimonials/rizqi-uthama.avif" alt="Rizqi Uthama" class="w-12 h-12 rounded-full object-cover border border-peony-pale flex-shrink-0">
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-sm sm:text-base font-bold text-peony-dark truncate">
+                                    Rizqi Uthama
+                                </h3>
+                                <p class="text-xs font-medium text-peony-rose/80 line-clamp-2 leading-snug">
+                                    Campaign &amp; Activation Manager, PT Bank Mandiri (Persero) Tbk
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Role Tag Badge Statis -->
+                        <div class="mb-3">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider uppercase bg-peony-blush/70 text-peony-rose border border-peony-pale/60">
+                                MENTOR &middot; ASTRA FINANCIAL
+                            </span>
+                        </div>
+
+                        <!-- Middle Quote Text -->
+                        <div class="relative">
+                            <i class="fa-solid fa-quote-left text-peony-blush text-lg mb-1 block"></i>
+                            <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed italic font-normal">
+                                "I'm confident that Devina's enthusiasm, adaptability, and willingness to learn would make her a valuable asset to any team."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom LinkedIn Verification Link Button (Gradient Hover) -->
+                    <div class="pt-3 mt-4 border-t border-peony-pale/30 flex items-center justify-between text-[11px] font-semibold text-peony-dark/60">
+                        <span class="flex items-center text-peony-rose/70">
+                            <i class="fa-solid fa-circle-check text-peony-red mr-1.5"></i> Verified Recommendation
+                        </span>
+                        <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-7 h-7 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 6: MARIA NATASYA DUKA -->
+                <div class="bg-white rounded-2xl p-5 border border-peony-pale shadow-sm flex flex-col justify-between relative group">
+                    <div>
+                        <!-- Top Row: Profile Image & Role Info -->
+                        <div class="flex items-start space-x-3 mb-3.5">
+                            <img src="assets/testimonials/maria-natasya.avif" alt="Maria Natasya Duka" class="w-12 h-12 rounded-full object-cover border border-peony-pale flex-shrink-0">
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-sm sm:text-base font-bold text-peony-dark truncate">
+                                    Maria Natasya Duka
+                                </h3>
+                                <p class="text-xs font-medium text-peony-rose/80 line-clamp-2 leading-snug">
+                                    Commercial Strategy &amp; Strategic Partnerships
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Role Tag Badge Statis -->
+                        <div class="mb-3">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider uppercase bg-peony-blush/70 text-peony-rose border border-peony-pale/60">
+                                MENTOR &middot; TELKOM LANDMARK TOWER
+                            </span>
+                        </div>
+
+                        <!-- Middle Quote Text -->
+                        <div class="relative">
+                            <i class="fa-solid fa-quote-left text-peony-blush text-lg mb-1 block"></i>
+                            <p class="text-xs sm:text-sm text-peony-dark/90 leading-relaxed italic font-normal">
+                                "What I appreciated most about Devina was her positive attitude and the way she took ownership of her responsibilities."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom LinkedIn Verification Link Button (Gradient Hover) -->
+                    <div class="pt-3 mt-4 border-t border-peony-pale/30 flex items-center justify-between text-[11px] font-semibold text-peony-dark/60">
+                        <span class="flex items-center text-peony-rose/70">
+                            <i class="fa-solid fa-circle-check text-peony-red mr-1.5"></i> Verified Recommendation
+                        </span>
+                        <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-7 h-7 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] hover:from-[#B01050] hover:to-[#780830] hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Section Footer Note -->
+            <div class="text-center">
+                <p class="text-xs text-peony-rose/75 italic font-medium">
+                    Note: Quotes are excerpts from LinkedIn recommendations; wording unchanged.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SECTION: GLOBAL CTA & FOOTER ================= -->
+    <footer id="contact-cta" class="bg-peony-dark text-white rounded-t-[2rem] sm:rounded-t-[3rem] pt-10 sm:pt-14 pb-6 border-t border-peony-rose/30 shadow-2xl relative overflow-hidden">
+        <!-- Background Accent Graphic 4 (Footer Bottom Left) -->
+        <img src="assets/decorations/flower-accent.avif" alt="Flower Accent" class="absolute -bottom-6 -left-6 w-32 h-32 opacity-20 blur-[1px] -rotate-45 pointer-events-none z-0">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- MAIN CTA BANNER CARD -->
+            <div class="bg-peony-rose/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-peony-pale/20 shadow-xl mb-8 sm:mb-10 backdrop-blur-sm relative overflow-hidden">
+                <div class="relative z-10 text-center max-w-3xl mx-auto space-y-4">
+                    <!-- Pill Tag Kecil (Top) -->
+                    <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-peony-vivid/30 text-peony-blush border border-peony-pale/30">
+                        LET'S CONNECT
+                    </span>
+
+                    <!-- Main Title -->
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                        Ready to Elevate Your Brand &amp; Corporate Strategy?
+                    </h2>
+
+                    <!-- Sub-text -->
+                    <p class="text-sm sm:text-base text-peony-blush/90 font-normal leading-relaxed">
+                        Whether you have an upcoming project, media relations inquiry, or career opportunity, I am always open to discussing strategic communication solutions that drive real impact.
+                    </p>
+
+                    <!-- 2 Action Buttons Row (Gradient Dark CTA) -->
+                    <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                        <!-- Primary Button (WhatsApp Gradient) -->
+                        <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[#780830] via-[#B01050] to-[#D84080] hover:shadow-xl rounded-full shadow-lg transition-all duration-300">
+                            <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Start a Conversation
+                        </a>
+                        <!-- Secondary Button (Download CV Light Gradient) -->
+                        <a href="assets/CV_Devina_Dhea_Pabundu.pdf" download class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold bg-gradient-to-r from-[#FFFFFF] to-[#FFF0F6] text-[#4A0818] hover:from-[#FCD4E6] hover:to-[#FFFFFF] rounded-full shadow-sm transition-all duration-300">
+                            <i class="fa-solid fa-file-arrow-down text-base mr-2 text-[#B01050]"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIRECT CONTACT & SOCIAL MEDIA GRID (4 Interactive Cards) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 mb-10">
+                
+                <!-- CARD 1: WHATSAPP BUTTON CARD -->
+                <a href="https://wa.me/6281235414147" target="_blank" rel="noopener noreferrer" class="bg-peony-rose/30 hover:bg-peony-rose/60 border border-peony-pale/20 hover:border-peony-pale/50 rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] group-hover:from-[#B01050] group-hover:to-[#780830] group-hover:text-white flex items-center justify-center text-lg mb-3 border border-peony-pale/30 transition-all duration-300">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">WhatsApp</p>
+                        <p class="text-sm font-bold text-white group-hover:text-peony-blush transition-colors">+62 812-3541-4147</p>
+                    </div>
+                </a>
+
+                <!-- CARD 2: EMAIL BUTTON CARD -->
+                <a href="mailto:devinadheaa@gmail.com" class="bg-peony-rose/30 hover:bg-peony-rose/60 border border-peony-pale/20 hover:border-peony-pale/50 rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] group-hover:from-[#B01050] group-hover:to-[#780830] group-hover:text-white flex items-center justify-center text-lg mb-3 border border-peony-pale/30 transition-all duration-300">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">Email Address</p>
+                        <p class="text-sm font-bold text-white group-hover:text-peony-blush transition-colors truncate">devinadheaa@gmail.com</p>
+                    </div>
+                </a>
+
+                <!-- CARD 3: LINKEDIN BUTTON CARD -->
+                <a href="https://linkedin.com/in/devinadheap/" target="_blank" rel="noopener noreferrer" class="bg-peony-rose/30 hover:bg-peony-rose/60 border border-peony-pale/20 hover:border-peony-pale/50 rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFF0F6] to-[#FCD4E6] text-[#780830] group-hover:from-[#B01050] group-hover:to-[#780830] group-hover:text-white flex items-center justify-center text-lg mb-3 border border-peony-pale/30 transition-all duration-300">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">LinkedIn</p>
+                        <p class="text-sm font-bold text-white group-hover:text-peony-blush transition-colors truncate">linkedin.com/in/devinadheap</p>
+                    </div>
+                </a>
+
+                <!-- CARD 4: LOCATION (STATIS CARD) -->
+                <div class="bg-peony-rose/30 border border-peony-pale/20 rounded-2xl p-4 sm:p-5 flex flex-col justify-between">
+                    <div class="w-10 h-10 rounded-xl bg-peony-red/30 text-peony-blush flex items-center justify-center text-lg mb-3 border border-peony-pale/30">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold text-peony-pale/80 uppercase tracking-wider mb-0.5">Current Base</p>
+                        <p class="text-sm font-bold text-white">Surabaya &amp; Jakarta, Indonesia</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SUB-FOOTER / COPYRIGHT ROW -->
+            <div class="flex flex-col sm:flex-row items-center justify-between border-t border-white/10 pt-6 gap-3">
+                <p class="text-xs text-peony-blush/70 font-medium text-center sm:text-left">
+                    &copy; 2026 Devina Dhea Pabundu. All Rights Reserved.
+                </p>
+
+                <!-- Back to Top Button (Gradient Accent) -->
+                <a href="#" class="inline-flex items-center space-x-2 text-xs font-semibold bg-gradient-to-r from-[#FFFFFF] to-[#FFF0F6] text-[#4A0818] hover:from-[#FCD4E6] hover:to-[#FFFFFF] px-4 py-1.5 rounded-full shadow-sm transition-all duration-300">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up text-[10px] text-[#B01050]"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
